@@ -1,0 +1,28 @@
+.formHead{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.h3{
+    text-align:center;
+    background-color: rgb(198, 198, 198);
+    margin: 0;
+    padding: 20px 10px 20px 10px;
+    /* height: 30px; */
+    padding-top: 8px;
+}
+
+button{
+    width: 33.33%;
+    height: 100px;
+    cursor: pointer;
+}
+
+.formAuth{
+    margin-top: 50px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
