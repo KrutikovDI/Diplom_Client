@@ -26,7 +26,15 @@ export const filesSlice = createSliceWithThunk({
         fetchUserLogin: create.asyncThunk(
             async (_, { rejectWithValue }) => {
                 try {
-                    const response = await fetch('http://127.0.0.1:8000/users/?fullName=Ольга');
+                    const response = await fetch('http://127.0.0.1:8000/enter/', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                          message: 'from client'
+                        }),
+                        headers: {
+                          'Content-type': 'application/json; charset=UTF-8',
+                        },
+                    });
                     if (!response.ok) {
                         return rejectWithValue('Пользователь не найден!')
                     }
