@@ -23,7 +23,10 @@ const LoginForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(fetchUserLogin()).then(response =>
+    dispatch(fetchUserLogin({
+      login: UseLogin,
+      password: password
+    })).then(response =>
     console.log(response.payload))
   }
 

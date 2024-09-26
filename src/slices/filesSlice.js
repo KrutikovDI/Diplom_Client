@@ -24,13 +24,11 @@ export const filesSlice = createSliceWithThunk({
         registrData: create.reducer((state, action) => {
         }),
         fetchUserLogin: create.asyncThunk(
-            async (_, { rejectWithValue }) => {
+            async (loginPassword, { rejectWithValue }) => {
                 try {
                     const response = await fetch('http://127.0.0.1:8000/enter/', {
                         method: 'POST',
-                        body: JSON.stringify({
-                          message: 'from client'
-                        }),
+                        body: JSON.stringify(loginPassword),
                         headers: {
                           'Content-type': 'application/json; charset=UTF-8',
                         },
