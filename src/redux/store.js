@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import filesReducer from "../slices/filesSlice";
+import userReducer from "./slices/userSlice";
 // import usersReducer from "../slices/usersSlice";
 
 
@@ -7,7 +7,7 @@ import filesReducer from "../slices/filesSlice";
 
 export const store = configureStore({
   reducer: combineReducers ({
-    files: filesReducer,
+    user: userReducer,
   }),
   middleware: (getDefaultMiddleware) => getDefaultMiddleware()
 });
